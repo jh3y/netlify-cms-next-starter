@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin: Netlify CMS && Next.js Starter</title>
+    <link rel="shortcut icon" href="/assets/icons/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/icons/logo-192x192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  </body>
+</html>

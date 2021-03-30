@@ -1,0 +1,58 @@
+backend:
+  name: git-gateway
+  branch: main
+publish_mode: editorial_workflow
+media_folder: "public/images"
+public_folder: "/images"
+collections:
+  - label: "Globals"
+    name: "globals"
+    files:
+      - label: "Site Data"
+        name: "site_data"
+        create: true
+        delete: false
+        file: "_data/site.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Url", name: "url", widget: "string" }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+      - label: "Site Copy"
+        name: "site_copy"
+        delete: false
+        create: true
+        file: "_data/copy.json"
+        fields:
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+  - name: "standalone pages"
+    label: "Standalone Pages"
+    folder: "standalone-pages"
+    slug: "{{slug}}"
+    file: "standalone-pages/{{slug}}.mdx"
+    create: true
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "SEO Meta Title",
+          name: "metaTitle",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "SEO Meta Description",
+          name: "metaDesc",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Social Image",
+          name: "socialImage",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
