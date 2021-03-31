@@ -35,6 +35,8 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+# Also cover the function generated for Next.js
+netlify
 
 # Don't commit Netlify CMS config into public
 public/config.yml

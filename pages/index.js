@@ -2,7 +2,7 @@ import { useEffect, Fragment } from 'react'
 import Head from 'next/head'
 import copy from '@data/copy.json'
 
-export default function Home() {
+const Home = () => {
   useEffect(() => {
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', (user) => {
@@ -27,6 +27,8 @@ export default function Home() {
     </Fragment>
   )
 }
+
+export default Home
 
 // <script
 //   dangerouslySetInnerHTML={{

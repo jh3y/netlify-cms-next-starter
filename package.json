@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "npx netlify-cms-proxy-server & next dev & node admin/config-watcher.js",
-    "prebuild": "cp admin/config.yml public/config.yml",
     "build": "next build",
     "start": "next start"
   },
